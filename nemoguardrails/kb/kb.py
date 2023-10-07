@@ -19,7 +19,7 @@ import os
 from time import time
 from typing import Callable, List, Optional, cast
 
-from annoy import AnnoyIndex
+#from annoy import AnnoyIndex
 
 from nemoguardrails.embeddings.index import EmbeddingsIndex, IndexItem
 from nemoguardrails.kb.utils import split_markdown_in_topic_chunks
@@ -89,6 +89,7 @@ class KnowledgeBase:
             and os.path.exists(embedding_size_file)
         ):
             from nemoguardrails.embeddings.basic import BasicEmbeddingsIndex
+            from annoy import AnnoyIndex
 
             log.info(cache_file)
             self.index = cast(

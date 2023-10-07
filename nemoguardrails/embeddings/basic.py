@@ -15,8 +15,8 @@
 
 from typing import List
 
-from annoy import AnnoyIndex
-from torch import cuda
+#from annoy import AnnoyIndex
+#from torch import cuda
 
 from nemoguardrails.embeddings.index import EmbeddingModel, EmbeddingsIndex, IndexItem
 
@@ -93,6 +93,7 @@ class BasicEmbeddingsIndex(EmbeddingsIndex):
             self._embedding_size = len(self._embeddings[0])
 
     async def build(self):
+        from annoy import AnnoyIndex
         """Builds the Annoy index."""
         self._index = AnnoyIndex(len(self._embeddings[0]), "angular")
         for i in range(len(self._embeddings)):
@@ -114,6 +115,7 @@ class SentenceTransformerEmbeddingModel(EmbeddingModel):
     """Embedding model using sentence-transformers."""
 
     def __init__(self, embedding_model: str):
+        from torch import cuda
         from sentence_transformers import SentenceTransformer
 
         device = "cuda" if cuda.is_available() else "cpu"
