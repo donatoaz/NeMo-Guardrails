@@ -63,7 +63,6 @@ setup(
         "typer",
         "PyYAML",
         "setuptools",
-        "annoy",
         "starlette",
         "uvicorn",
         "httpx",
@@ -74,5 +73,6 @@ setup(
     ],
     extras_require={
         "eval": ["tqdm>=4.65", "numpy>=1.24"],
+	"local": ["annoy"]
     },
 )
