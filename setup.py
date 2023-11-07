@@ -48,8 +48,8 @@ setup(
     },
     package_data={
         "nemoguardrails": [
-            "**/*.yml",
-            "**/*.co",
+            "rails/**/*.yml",
+            "rails/llm/*.co",
             "**/*.txt",
             "**/*.json",
             "eval/data/**/*",
