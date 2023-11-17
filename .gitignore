@@ -25,3 +25,4 @@ scripts
 original_dataset
 /**/chitchat/user.co
 /**/banking/user.co
+.venv/

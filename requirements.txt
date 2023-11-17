@@ -16,7 +16,7 @@
 #Jinja2==3.1.2
 #nest-asyncio==1.5.6
 
-pydantic==1.10.9
+pydantic>=1.10.9
 aiohttp
 langchain
 requests
